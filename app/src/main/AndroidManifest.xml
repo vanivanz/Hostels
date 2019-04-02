@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/lg"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MoreActivity"></activity>
+        <activity android:name=".MoreActivity"
+            android:parentActivityName=".sec"
+            ></activity>
         <activity android:name=".thr" />
         <activity android:name=".sec" />
         <activity android:name=".MainActivity">
