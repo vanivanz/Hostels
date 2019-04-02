@@ -6,7 +6,7 @@
         />
     <item android:title="Help"
         android:icon="@drawable/help_user"
-        android:id="help"
+        android:id="@+id/help"
         />
     <item android:title="Favourite"
         android:icon="@drawable/favourite_user"
