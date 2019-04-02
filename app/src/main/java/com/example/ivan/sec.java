@@ -3,6 +3,8 @@ package com.example.ivan;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -41,11 +43,28 @@ public class sec extends AppCompatActivity {
                 reg.getContext().startActivity(intent);
                 Toast.makeText(getApplicationContext(), ""+list.get(i), Toast.LENGTH_SHORT).show();
 
-
-
-
-
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_items,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.setting:
+                startActivity(new Intent(getApplicationContext(),MoreActivity.class));
+                break;
+            case R.id.share:
+                break;
+                default:
+                    return false;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
