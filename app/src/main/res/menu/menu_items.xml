@@ -9,4 +9,7 @@
         android:id="@+id/share"
         app:showAsAction="never"
         />
+    <item
+        android:title="Email Me"
+        android:id="@+id/email"/>
 </menu>

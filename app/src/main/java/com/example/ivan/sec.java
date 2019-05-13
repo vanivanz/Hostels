@@ -22,9 +22,9 @@ public class sec extends AppCompatActivity {
 
         final ListView reg = findViewById(R.id.hostels);
         final ArrayList<String> list = new ArrayList<String>();
-        list.add("Boma");
+        list.add("Taso Village Hostels");
         list.add("Golf Course");
-        list.add("Taso");
+        list.add("Boma");
         list.add("Kashanyarazi");
         list.add("Kiswahili");
         list.add("Town");
@@ -59,10 +59,17 @@ public class sec extends AppCompatActivity {
             case R.id.setting:
                 startActivity(new Intent(getApplicationContext(),MoreActivity.class));
                 break;
-            case R.id.share:
+            case R.id.email:
+                startActivity(new Intent(getApplicationContext(),Email.class));
                 break;
+            case R.id.share:
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                String shareBodyText = "SHARE THE APP TO OTHERS";
+                intent.putExtra(Intent.EXTRA_TEXT, shareBodyText);
+                startActivity(Intent.createChooser(intent,"Choose app to complete sharing"));
                 default:
-                    return false;
+                    return true;
         }
 
         return super.onOptionsItemSelected(item);

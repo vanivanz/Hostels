@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/lg"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MoreActivity"
-            android:parentActivityName=".sec"
-            ></activity>
+        <activity android:name=".Hostel"></activity>
+        <activity android:name=".Email" />
+        <activity
+            android:name=".MoreActivity"
+            android:parentActivityName=".sec" />
         <activity android:name=".thr" />
         <activity android:name=".sec" />
         <activity android:name=".MainActivity">
